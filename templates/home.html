@@ -4,7 +4,9 @@
 
 <h2>Addition of two numbers</h2>
 
-<form action='add'>
+<form action='add' method='post'>
+
+    {% csrf_token %}
 
     1st number: <input type="number" name="n1">
     <br/>

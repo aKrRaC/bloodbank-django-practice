@@ -9,8 +9,8 @@ def home(request):
 def add(request):
 
     #performing addition
-    num1 = request.GET['n1']
-    num2 = request.GET['n2']
+    num1 = request.POST['n1']
+    num2 = request.POST['n2']
     result = int(num1) + int(num2)
 
 
