@@ -1,0 +1,47 @@
+{% load static %}
+{% block content %}
+
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html>
+
+    <head>
+
+        <title>User Details</title>
+        <!--Referring the css style sheet, styles.css file-->
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
+    
+    </head>
+
+    <body>
+        <p action="home">
+        {% csrf_token %}
+        <!--User Details-->
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>Blood group</td>
+                <td>Date of Birth</td>
+                <td>Email ID</td>
+                <td>Contact</td>
+            </tr>
+            {% for i in userdet %}
+            <tr>
+                <td>{{i.name}}</td>
+                <td>{{i.blood}}</td>
+                <td>{{i.dob}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.contact}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <!--buttons-->
+        <button type="button" id="subbtn">
+            <a href="{% url 'index' %}">Go Back</a>
+        </button>
+        </p>
+    </body>
+
+</html>
+
+{% endblock %}

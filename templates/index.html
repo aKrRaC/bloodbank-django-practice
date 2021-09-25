@@ -1,0 +1,55 @@
+{% load static %}
+{% static "images" as baseUrl %}
+
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html>
+    <head>
+
+        <title>Registration form</title>
+        <!--Referring the css style sheet, styles.css file-->
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
+    
+    </head>
+
+    <body>
+
+        <!--Form to get user data-->
+        <form id="form">
+            <h3 id="branding">Registration form</h3>
+            <p id="heading">Fill up the form to register</p>
+            <br/>
+            <!--Profile pic-->
+
+            {% if user1.haveimg %}
+
+            <image id="profilepic" src="{{baseUrl}}/{{user1.dpimg}}" />
+            
+            {% else %}
+            <image id="profilepic" src="{% static 'images/noimg.jpg' %}" />
+
+            {% endif %}
+            <br/><br/>
+            <!--First name-->
+            <input class="input" type="text" maxlength="10" id="firstname" value="{{user1.fname}}" required>
+            <!--Last name-->
+            <input class="input" type="text" maxlength="15" id="lastname" value="{{user1.lname}}" required>
+            <img id="sideimg" src = "https://cdni.iconscout.com/illustration/premium/thumb/sign-up-page-1886582-1598253.png"/>
+            <br/>
+            <!--DOB-->
+            <input class="input" type="text" id="date" value="{{user1.dob}}" >
+            <!--Contact-->
+            <input class="input" type="number" maxlength="10" id="phno" value="{{user1.contact}}" required>
+            <br/>
+            <!--E-mail ID-->
+            <input class="input" type="text" id="email" value="{{user1.email}}" required >
+            <br/>
+            <br/>
+            <!--buttons-->
+            <input class= "btn" type="reset" value="Reset" id="rstbtn">
+            <input class= "btn" type="submit" value="Submit" id="subbtn">
+
+        </form>
+
+    </body>
+
+</html>

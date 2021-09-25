@@ -1,0 +1,16 @@
+from django.shortcuts import render
+from .models import User
+# Create your views here.
+
+def index(request):
+
+    user1 = User()
+    user1.fname = 'Akhil'
+    user1.lname = 'Krishnan'
+    user1.email = 'akhilrac2000@gmail.com'
+    user1.dpimg = 'user1.jpg'
+    user1.contact = 9446512277
+    user1.dob = '21/08/2000'
+    user1.haveimg = True
+
+    return render(request,'index.html', {'user1': user1})
