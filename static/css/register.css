@@ -1,4 +1,4 @@
-/*CSS style sheet for inboxmail.html*/
+/*CSS style sheet for register.html*/
 
 body
 {
@@ -39,7 +39,8 @@ body
     position: absolute;
     width: 620px;
     height: 600px;
-    margin-top: -250px;
+    margin-top: -280px;
+    margin-left: -50px;
 }
 
 #branding
@@ -75,11 +76,6 @@ body
     margin-left: 10px;
 }
 
-#date
-{
-    padding-inline-end: 40px;
-}
-
 #phno
 {
     margin-left: 10px;
@@ -87,7 +83,7 @@ body
 
 #email
 {
-    padding-inline-end: 220px;
+    padding-inline-end: 225px;
 }
 
 .btn

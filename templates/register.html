@@ -1,0 +1,56 @@
+{% load static %}
+{% block content %}
+
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html>
+
+    <head>
+
+        <title>Blood Bank | Register</title>
+        <!--Referring the css style sheet, styles.css file-->
+        <link rel="stylesheet" href="{% static 'css/register.css' %}" type="text/css">
+    
+    </head>
+
+    <body>
+
+        <!--Form to get user data-->
+        <form id="form" action= "register_user" method = "post">
+
+            {% csrf_token %}
+
+            <h3 id="branding">Registration form</h3>
+            <p id="heading">Fill up the form to register to Blood bank</p>
+            <br/>
+            {% if user1.haveimg %}
+                <image id="profilepic" src="{{baseUrl}}/{{user1.dpimg}}" />
+            {% else %}
+                <image id="profilepic" src="{% static 'images/noimg.jpg' %}" />
+            {% endif %}
+            <br/><br/>
+            <!--First name-->
+            <input class="input" name="name" type="text" maxlength="10" id="firstname" placeholder="First name" required>
+            <!--Blood group-->
+            <input class="input" name="blood" type="text" maxlength="15" id="lastname" placeholder="Blood group (eg: O+)" required>
+            <img id="sideimg" src = "https://cdni.iconscout.com/illustration/premium/thumb/sign-up-page-1886582-1598253.png"/>
+            <br/>
+            <!--DOB-->
+            <input class="input" name="dob" type="text" placeholder="DOB (DD/MM/YYYY)" id="date">
+            <!--Contact-->
+            <input class="input" name="contact" type="number" maxlength="10" id="phno" placeholder="Contact no." required>
+            <br/>
+            <!--E-mail ID-->
+            <input class="input" name="email" type="text" id="email" placeholder="Email id" required >
+            <br/>
+            <br/>
+            <!--buttons-->
+            <input class= "btn" type="reset" value="Reset" id="rstbtn">
+            <input class= "btn" type="submit" value="Submit" id="subbtn">
+
+        </form>
+
+    </body>
+
+</html>
+
+{% endblock %}

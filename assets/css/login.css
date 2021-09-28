@@ -1,4 +1,4 @@
-/*CSS style sheet for inboxmail.html*/
+/*CSS style sheet for login.html*/
 
 body
 {
@@ -21,34 +21,21 @@ body
     width: 60%;
 }
 
-#profilepic
-{
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-#imageupload
-{
-    display: inline-block;
-}
-
-#sideimg
-{
-    position: absolute;
-    width: 620px;
-    height: 600px;
-    margin-top: -220px;
-    margin-left: -50px;
-}
-
 #branding
 {
     font-size: 25px;
     color: lightseagreen;
     display: inline-block;
     padding-top: 20px;
+}
+
+#sideimg
+{
+    position: absolute;
+    width: 320px;
+    height: 300px;
+    margin-top: -90px;
+    margin-left: 500px;
 }
 
 #heading
@@ -71,32 +58,14 @@ body
     border:2px solid lightseagreen;
 }
 
-#lastname
-{
-    margin-left: 10px;
-}
-
-#phno
-{
-    margin-left: 10px;
-}
-
 #email
 {
-    padding-inline-end: 225px;
+    padding-inline-end: 215px;
 }
 
 #password1
 {
     margin-left: 10px;
-}
-
-#passhint
-{
-    margin-top: -6px;
-    font-size: 12px;
-    margin-bottom: -12px;
-    opacity: 0.8;
 }
 
 #shpasstext
