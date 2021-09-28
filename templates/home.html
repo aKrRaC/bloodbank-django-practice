@@ -1,1 +1,38 @@
-home
+{% load static %}
+{% block content %}
+
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html>
+    <head>
+
+        <title>Blood Bank | Home</title>
+        <!--Referring the css style sheet, styles.css file-->
+        <link rel="stylesheet" href="{% static 'css/login.css' %}" type="text/css">
+    
+    </head>
+
+    <body>
+
+        <!--Form to get user data-->
+        <form id="form" method = "post">
+
+            {% csrf_token %}
+
+            <h3 id="branding">Blood Bank >> Home</h3>
+            <p id="heading">Hey {{user.fname}}! Welcome to Blood bank</p>
+            <br/>
+            <img id="sideimg" src = "https://imgr.search.brave.com/9oj1HoWaO-Q7j7viSXrlM1qoLup2cPi9HC4Kn4FRvAk/fit/626/626/ce/1/aHR0cHM6Ly9pbWFn/ZS5mcmVlcGlrLmNv/bS9mcmVlLXZlY3Rv/ci9sb2dpbi1jb25j/ZXB0LWlsbHVzdHJh/dGlvbl8xMTQzNjAt/NzM5LmpwZw"/>
+            <br/>
+            <br/>
+            <!--buttons-->
+            <input class= "btn" onclick="location.href = '{% url 'display_page' %}';" type="button" value="Display" id="rstbtn">
+            <input class= "btn" onclick="location.href = '{% url 'register_page' %}';" type="button" value="Register" id="subbtn">
+
+        </form>
+
+    </body>
+
+</html>
+
+{% endblock %}
+
