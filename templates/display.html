@@ -6,23 +6,25 @@
 
     <head>
 
-        <title>User Details</title>
+        <title>Blood Bank | Userdetails</title>
         <!--Referring the css style sheet, styles.css file-->
-        <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/display.css' %}" type="text/css">
     
     </head>
 
     <body>
-        <p action="home">
+        <h3 id="branding">Blood Bank >> Home >> Userdetails</h3>
+        <br><br>
+        <p>
         {% csrf_token %}
         <!--User Details-->
-        <table>
+        <table class="styled-table">
             <tr>
-                <td>Name</td>
-                <td>Blood group</td>
-                <td>Date of Birth</td>
-                <td>Email ID</td>
-                <td>Contact</td>
+                <th>Name</th>
+                <th>Blood group</th>
+                <th>Date of Birth</th>
+                <th>Email ID</th>
+                <th>Contact</th>
             </tr>
             {% for i in userdet %}
             <tr>
@@ -34,11 +36,6 @@
             </tr>
             {% endfor %}
         </table>
-
-        <!--buttons-->
-        <button type="button" id="subbtn">
-            <a href="{% url 'home_page' %}">Go Back</a>
-        </button>
         </p>
     </body>
 

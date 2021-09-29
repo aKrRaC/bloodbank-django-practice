@@ -7,7 +7,7 @@
 
         <title>Blood Bank | Home</title>
         <!--Referring the css style sheet, styles.css file-->
-        <link rel="stylesheet" href="{% static 'css/login.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/home.css' %}" type="text/css">
     
     </head>
 
@@ -21,12 +21,14 @@
             <h3 id="branding">Blood Bank >> Home</h3>
             <p id="heading">Hey {{user.fname}}! Welcome to Blood bank</p>
             <br/>
-            <img id="sideimg" src = "https://imgr.search.brave.com/9oj1HoWaO-Q7j7viSXrlM1qoLup2cPi9HC4Kn4FRvAk/fit/626/626/ce/1/aHR0cHM6Ly9pbWFn/ZS5mcmVlcGlrLmNv/bS9mcmVlLXZlY3Rv/ci9sb2dpbi1jb25j/ZXB0LWlsbHVzdHJh/dGlvbl8xMTQzNjAt/NzM5LmpwZw"/>
-            <br/>
-            <br/>
+            <img id="sideimg" src = "https://imgr.search.brave.com/7yTWTLUepjxE14BysHljupKLdLACV5FopkaqtYUgvaM/fit/612/408/ce/1/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vdmVjdG9y/cy9ibG9vZC1kb25h/dGlvbi1jb25jZXB0/LXZlY3Rvci1pbGx1/c3RyYXRpb24tdmVj/dG9yLWlkMTEzMzg2/ODk5Mj9rPTYmbT0x/MTMzODY4OTkyJnM9/NjEyeDYxMiZ3PTAm/aD0xVTZtMzh2ZTZ4/d2FvdWtPbnluaXQ0/ajI2Z2pXMF83R3RZ/OUlVY19MTjRjPQ"/>
+            <br/><br/><br/>
+
             <!--buttons-->
-            <input class= "btn" onclick="location.href = '{% url 'display_page' %}';" type="button" value="Display" id="rstbtn">
-            <input class= "btn" onclick="location.href = '{% url 'register_page' %}';" type="button" value="Register" id="subbtn">
+            <input class= "btn" onclick="location.href = '{% url 'display_page' %}';" type="button" value="Display" id="dispbtn">
+            <input class= "btn" onclick="location.href = '{% url 'register_page' %}';" type="button" value="Register" id="regbtn">
+            <img id="logoutimg" src = "https://imgr.search.brave.com/j-b4n0FkbBrW6b29yCBn2-RLuq3KHdv1DJP5jr65wwA/fit/1200/1200/ce/1/aHR0cHM6Ly93d3cu/Y2xrZXIuY29tL2Ns/aXBhcnRzLzkvZi85/LzIvMTMxODAxOTQx/NTExMTExMzUzMjlw/b3dlci5wbmc"/>
+            <input class= "btn" onclick="location.href = '{% url 'login_page' %}';" type="button" value="Logout" id="loutbtn">
 
         </form>
 

@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'helloworld.apps.HelloworldConfig'
+    'bloodbank.apps.BloodbankConfig'
 ]
 
 MIDDLEWARE = [
@@ -77,8 +77,11 @@ WSGI_APPLICATION = 'pydjango.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'bloodbankdata',
+        'USER': 'akhilrac2000',
+        'PASSWORD': 'Akr*Rac@2000',
+        'HOST': 'localhost'
     }
 }
 
@@ -124,6 +127,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR,'assets')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

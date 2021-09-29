@@ -1,4 +1,4 @@
-/*CSS style sheet for register.html*/
+/*CSS style sheet for login.html*/
 
 body
 {
@@ -21,34 +21,21 @@ body
     width: 60%;
 }
 
-#profilepic
-{
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-#imageupload
-{
-    display: inline-block;
-}
-
-#sideimg
-{
-    position: absolute;
-    width: 620px;
-    height: 600px;
-    margin-top: -280px;
-    margin-left: -50px;
-}
-
 #branding
 {
     font-size: 25px;
     color: lightseagreen;
     display: inline-block;
     padding-top: 20px;
+}
+
+#sideimg
+{
+    position: absolute;
+    width: 260px;
+    height: 200px;
+    margin-top: -120px;
+    margin-left: 550px;
 }
 
 #heading
@@ -71,21 +58,6 @@ body
     border:2px solid lightseagreen;
 }
 
-#lastname
-{
-    margin-left: 10px;
-}
-
-#phno
-{
-    margin-left: 10px;
-}
-
-#email
-{
-    padding-inline-end: 225px;
-}
-
 .btn
 {
     background-color: lightseagreen;
@@ -100,13 +72,34 @@ body
     cursor: pointer;
 }
 
-#subbtn
+#regbtn
 {
     margin-left: 210px;
 }
 
-#rstbtn
+#dispbtn
 {
     background-color: white;
     color: lightseagreen;
+}
+
+#loutbtn
+{
+    background-color: white;
+    color: red;
+    position: absolute;
+    margin-left: 375px;
+    margin-top: -200px;
+    border: none;
+    z-index: 1;
+}
+
+#logoutimg
+{
+    position: absolute;
+    z-index: 2;
+    margin-left: 387px;
+    margin-top: -185px;
+    width: 10px;
+    height: 10px;
 }

@@ -4,7 +4,6 @@ from django.shortcuts import redirect
 # Create your views here.
 reg_user_list = []
 user_list = []
-login_status = 0
 
 def index(request):
     return render(request,'index.html')
@@ -41,15 +40,14 @@ def login(request):
     login_user.append(request.POST['pass'])
     for i in user_list:
         if (i["email"] == login_user[0] and i["pass"] == login_user[1]):
-            login_status = 1
             return render(request,'home.html',{"user": i})
         else:
             return redirect('login_page')
 
-def home(request):
+def home_page(request):
     login_status = request.session.get('login_status',1)
     if (login_status == 1):
-        return redirect('home')
+        return redirect('home_page')
     else:
         return redirect('index')
 
@@ -70,7 +68,7 @@ def register(request):
 
     reg_user_list.append(reg_user)
     print(reg_user_list)
-    return redirect('home_page')
+    return redirect('register_page')
 
 def display(request):
     return render(request,'display.html',{'userdet': reg_user_list})

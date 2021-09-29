@@ -87,6 +87,7 @@ body
     font-size: 14px;
     font-weight: 550;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 #subbtn
