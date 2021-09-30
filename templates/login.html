@@ -14,7 +14,7 @@
     <body>
 
         <!--Form to get user data-->
-        <form id="form" action = "login_user" method = "post">
+        <form id="form" action = "login" method = "post">
 
             {% csrf_token %}
 
@@ -34,7 +34,7 @@
             <br/>
             <br/>
             <!--buttons-->
-            <input class= "btn" type="reset" value="Reset" id="rstbtn">
+            <input class= "btn" onclick="location.href = '{% url 'signup' %}';" type="button" value="Signup" id="signupbtn">
             <input class= "btn" type="submit" value="Login" id="subbtn">
 
         </form>

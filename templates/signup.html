@@ -14,7 +14,7 @@
     <body>
 
         <!--Form to get user data-->
-        <form id="form" action = "signup_user" method = "post">
+        <form id="form" action = "signup" method = "post">
 
             {% csrf_token %}
 
@@ -23,7 +23,7 @@
             <br/>
             <!--Profile pic-->
             <image id="profilepic" src="https://images.assetsdelivery.com/compings_v2/salamatik/salamatik1801/salamatik180100019.jpg" />
-            <!--<input id="imageupload" type="file" name="profile_photo" placeholder="Photo" capture>-->
+            <input id="imageupload" type="file" name="profile_photo" placeholder="Photo" capture>
             <br/><br/>
             <!--First name-->
             <input class="input" name= "fname" type="text" maxlength="10" id="firstname" placeholder="First name" required>
@@ -53,7 +53,7 @@
             <br/>
             <br/>
             <!--buttons-->
-            <input class= "btn" type="reset" value="Reset" id="rstbtn">
+            <input class= "btn" onclick="location.href = '{% url 'login' %}';" type="button" value="Login" id="loginbtn">
             <input class= "btn" type="submit" value="Submit" id="subbtn">
 
         </form>
