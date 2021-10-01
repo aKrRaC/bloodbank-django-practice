@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'bloodbankdata',
         'USER': 'akhilrac2000',
-        'PASSWORD': 'Akr*Rac@2000',
+        'PASSWORD': '',
         'HOST': 'localhost'
     }
 }
