@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
 from django.contrib import messages
-from .models import regUser
+from .models import RegUser
 
 # Create your views here.
 
@@ -19,11 +19,11 @@ def register(request):
         email = request.POST['email']
         contact = request.POST['contact']
 
-        if (regUser.objects.filter(first_name=first_name).exists()):
+        if (RegUser.objects.filter(first_name=first_name).exists()):
                 messages.info(request,'Person already registered')
                 return redirect('register')
         else:
-            reg_user = regUser.objects.create(
+            reg_user = RegUser.objects.create(
                 first_name = first_name,
                 email = email,
                 blood = blood,
@@ -31,10 +31,10 @@ def register(request):
                 contact = contact,
             )
             reg_user.save()
-            return redirect('home')
+            return redirect('display')
     else:
         return render(request,'register.html')
 
 def display(request):
-    reg_users = regUser.objects.all()
+    reg_users = RegUser.objects.all()
     return render(request,'display.html',{"reg_users": reg_users})

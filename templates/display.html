@@ -9,34 +9,50 @@
         <title>Blood Bank | Userdetails</title>
         <!--Referring the css style sheet, styles.css file-->
         <link rel="stylesheet" href="{% static 'css/display.css' %}" type="text/css">
-    
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.css"/>
     </head>
 
-    <body>
+    <body>  
         <h3 id="branding">Blood Bank >> Home >> Userdetails</h3>
         <br><br>
         <p>
         {% csrf_token %}
         <!--User Details-->
-        <table class="styled-table">
-            <tr>
-                <th>Name</th>
-                <th>Blood group</th>
-                <th>Date of Birth</th>
-                <th>Email ID</th>
-                <th>Contact</th>
-            </tr>
-            {% for i in reg_users %}
-            <tr>
-                <td>{{i.first_name}}</td>
-                <td>{{i.blood}}</td>
-                <td>{{i.dob}}</td>
-                <td>{{i.email}}</td>
-                <td>{{i.contact}}</td>
-            </tr>
-            {% endfor %}
+        <table class="styled-table" id = "disptable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Blood group</th>
+                    <th>Date of Birth</th>
+                    <th>Email ID</th>
+                    <th>Contact</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in reg_users %}
+                <tr>
+                    <td>{{i.first_name}}</td>
+                    <td>{{i.blood}}</td>
+                    <td>{{i.dob}}</td>
+                    <td>{{i.email}}</td>
+                    <td>{{i.contact}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
         </table>
+        <br/><br/><br/>
+
+        <!--buttons-->
+        <input class= "btn" onclick="location.href = '{% url 'home' %}';" type="button" value="Back" id="backbtn">
+        <input class= "btn" onclick="location.href = '{% url 'register' %}';" type="button" value="Add Donor" id="regbtn">
         </p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.js"></script>
+        <script>
+            $(document).ready( function () {
+                $('#disptable').DataTable();
+            } );
+        </script>
     </body>
 
 </html>

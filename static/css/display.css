@@ -15,6 +15,7 @@ body
     padding-top: 20px;
 }
 
+
 .styled-table {
     border-collapse: collapse;
     margin: 25px 0;
@@ -25,7 +26,7 @@ body
 }
 
 .styled-table thead tr {
-    background-color: #009879;
+    background-color: lightseagreen;
     color: #ffffff;
     text-align: left;
 }
@@ -51,4 +52,29 @@ body
 .styled-table tbody tr.active-row {
     font-weight: bold;
     color: #009879;
+}
+
+.btn
+{
+    background-color: lightseagreen;
+    padding: 12px 26px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid lightseagreen;
+    color: white;
+    font-size: 14px;
+    font-weight: 550;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#regbtn
+{
+    margin-left: 975px;
+}
+
+#backbtn
+{
+    background-color: white;
+    color: lightseagreen;
 }

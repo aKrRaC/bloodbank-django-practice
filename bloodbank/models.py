@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class regUser(models.Model):
+class RegUser(models.Model):
     id = models.AutoField
     first_name = models.CharField(max_length=20)
     blood = models.CharField(max_length=4)
